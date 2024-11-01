@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheel of Fortune Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            margin: 20px 0;
+            border: 2px solid #333;
+            background-color: #ccc;
+        }
+        .puzzle-board, .player-info, .controls, .word-to-guess {
+            margin: 10px;
+            text-align: center;
+        }
+        .puzzle-letter {
+            display: inline-block;
+            width: 30px;
+            height: 40px;
+            line-height: 40px;
+            border-bottom: 2px solid #333;
+            margin: 5px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wheel of Fortune</h1>
+    <canvas id="wheelCanvas" width="400" height="400"></canvas>
+    <div class="puzzle-board" id="puzzleBoard"></div>
+    <div class="controls">
+        <input type="text" id="guessInput" placeholder="Enter a letter" maxlength="1">
+        <button onclick="makeGuess()">Guess</button>
+    </div>
+    <div class="player-info" id="playerInfo"></div>
+    <script src="script.js"></script>
+</body>
+</html>
